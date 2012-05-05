@@ -1,4 +1,1 @@
-spartan_bootstrap
-=================
-
-My personal rails bootstrapper
+# This is my readme. I'll improve it soon...

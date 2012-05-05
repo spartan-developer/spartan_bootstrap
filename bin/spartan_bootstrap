@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+['generators/app_generator',
+ 'actions'
+ 'app_builder'
+].each { |path_end| require_relative "../lib/spartan_bootstrap/#{path_end}" }
+
+templates_root = File.expand_path(File.join("..", "templates"), File.dirname(__FILE__))
+SpartanBootstrap::Generator.source_root templates_root
+SpartanBootstrap::Generator.source_paths << Rails::Generators::AppGenerator.source_root << templates_root
+
+SpartanBootstrap::Generator.start
